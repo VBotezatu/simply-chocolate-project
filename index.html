@@ -79,7 +79,7 @@
             <div class="hero-box">
               <p class="hero-text">scroll down</p>
               <a href="#footer" class="hero-scroll">
-                <img src="./images/2.webp" alt="d" />
+                <img src="./images/hero-scroll.webp" alt="scroll-link" />
               </a>
             </div>
           </div>
@@ -129,7 +129,7 @@
       </section>
       <!-- ingredient -->
       <section class="ingredient">
-        <div class="container">
+        <div class="container ingredients-container">
           <h2 class="ingredient-title">
             IT ALL ADDS UP TO ONE EXCEPTIONAL
             <span class="title-span">TASTE</span> SENSATION
@@ -143,7 +143,7 @@
           <ul class="ingredient-list">
             <li class="ingredient-item">
               <img
-                class="ingredient-img"
+                class="ingredient-img ingredient-img1"
                 src="./images/ingredients-chocolate.webp"
                 alt="чоколатка"
               />
@@ -182,43 +182,50 @@
           <h2 class="process-title">
             HOW IT’S <span class="process-span">MADE?</span>
           </h2>
-          <video class="process-video" src="f">chocolate</video>
-          <div class="process-box">
-            <h3 class="process-subtitle">
-              Try our chocolates today and discover the perfect balance of
-              flavor
-            </h3>
-            <ul class="process-list">
-              <li class="process-item">
-                <p class="process-text">
-                  Heat the milk in a saucepan without bringing it to a boil. Add
-                  sugar and cocoa powder.
-                </p>
-              </li>
-              <li class="process-item">
-                <p class="process-text">
-                  At the same time, prepare a water bath. Melt the butter on it.
-                </p>
-              </li>
-              <li class="process-item">
-                <p class="process-text">
-                  "Mix" the milk mixture and already liquid butter. Mix
-                  thoroughly with a silicone spatula so that the mass becomes
-                  uniform and silky.
-                </p>
-              </li>
-              <li class="process-item">
-                <p class="process-text">
-                  Heat the mixture over low heat, letting it barely boil.
-                </p>
-              </li>
-              <li class="process-item">
-                <p class="process-text">
-                  Pour the chocolate into special containers (can be replaced
-                  with ice molds). Allow to cool and harden.
-                </p>
-              </li>
-            </ul>
+          <div class="process-main-box">
+            <img
+              class="process-img"
+              src="./images/process-img.webp"
+              alt="video-chocolate"
+            />
+            <div class="process-box">
+              <h3 class="process-subtitle">
+                Try our chocolates today and discover the perfect balance of
+                flavor
+              </h3>
+              <ul class="process-list">
+                <li class="process-item">
+                  <p class="process-text">
+                    Heat the milk in a saucepan without bringing it to a boil.
+                    Add sugar and cocoa powder.
+                  </p>
+                </li>
+                <li class="process-item">
+                  <p class="process-text">
+                    At the same time, prepare a water bath. Melt the butter on
+                    it.
+                  </p>
+                </li>
+                <li class="process-item">
+                  <p class="process-text">
+                    "Mix" the milk mixture and already liquid butter. Mix
+                    thoroughly with a silicone spatula so that the mass becomes
+                    uniform and silky.
+                  </p>
+                </li>
+                <li class="process-item">
+                  <p class="process-text">
+                    Heat the mixture over low heat, letting it barely boil.
+                  </p>
+                </li>
+                <li class="process-item">
+                  <p class="process-text">
+                    Pour the chocolate into special containers (can be replaced
+                    with ice molds). Allow to cool and harden.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -237,6 +244,7 @@
             </li>
             <li class="products-item">
               <img
+                class="products-img"
                 src="./images/products-apple.png"
                 alt="apple and cranberry"
               />
@@ -261,7 +269,7 @@
       </section>
       <!-- sellers -->
       <section class="sellers" id="sellers">
-        <div class="container">
+        <div class="container sellers-container">
           <h2 class="sellers-title">
             <span class="sellers-span">TOP</span> SELLERS
           </h2>
@@ -296,7 +304,6 @@
           <ul class="users-list">
             <li class="users-item">
               <div class="users-box">
-                <img class="users-img" src="./images/dobr.webp" alt="girl" />
                 <h3 class="users-subtitle">Victoria Dobrzhanska</h3>
                 <p class="users-text">
                   I love this chocolate bar. Perfect combination of light crispy
@@ -306,7 +313,6 @@
             </li>
             <li class="users-item">
               <div class="users-box">
-                <img class="users-img" src="./images/babe.webp" alt="man" />
                 <h3 class="users-subtitle">Nazar Babenko</h3>
                 <p class="users-text">
                   This chocolate confection is a delight! A delight! The wafer
@@ -317,7 +323,6 @@
             </li>
             <li class="users-item">
               <div class="users-box">
-                <img class="users-img" src="./images/kamp.webp" alt="girl" />
                 <h3 class="users-subtitle">Olena Kampusch</h3>
                 <p class="users-text">
                   Chocolate is a family favourite treat. Love the delicious
@@ -347,44 +352,48 @@
     <!-- footer -->
     <footer class="footer" id="footer">
       <div class="container">
-        <!-- footer-top -->
-        <section class="footer-top">
+        <div class="footer-box">
           <h2 class="top-title">
             <span class="footer-span">Chocolate</span> a delicious cure for a
             bad day
           </h2>
-          <ul class="top-list">
-            <li class="top-item">
-              <p class="top-phrase">Contact us</p>
-            </li>
-            <li class="top-item">
-              <p class="top-text">
-                +380 (68) 443-94-26
-                <span class="top-span">simplychoc@gmail.com</span>
-              </p>
-            </li>
-          </ul>
+          <div class="top-box">
+            <h3 class="top-phrase">Contact us</h3>
+            <ul class="top-list">
+              <li class="top-item top-item1">
+                <a class="top-link" href="tel:+380684439426">
+                  +380 (68) 443-94-26</a
+                >
+              </li>
+              <li class="top-item">
+                <a class="top-link top-link1" href="mailto:simplychoc@gmail.com"
+                  >simplychoc@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
           <ul class="header-socials">
             <li class="header-social">
-              <a href="" class="header-insta">instagram</a>
+              <a href="" class="header-insta">
+                <img src="./images/top-insta.webp" alt="insta" />
+              </a>
             </li>
             <li class="header-social">
-              <a href="" class="header-twitter">twitter</a>
+              <a href="" class="header-twitter">
+                <img src="./images/top-twitter.webp" alt="twitter" />
+              </a>
             </li>
           </ul>
-        </section>
-        <!-- footer-bottom -->
-        <section class="footer-bottom">
-          <nav class="bottom-navigation">
-            <ul class="bottom-list">
-              <li class="bottom-item">Home</li>
-              <li class="bottom-item">How it’s made?</li>
-              <li class="bottom-item">Our products</li>
-              <li class="bottom-item">Top sellers</li>
-              <li class="bottom-item">Chocolate is loved</li>
-            </ul>
-          </nav>
-        </section>
+        </div>
+        <nav class="bottom-navigation">
+          <ul class="bottom-list">
+            <li class="bottom-item">Home</li>
+            <li class="bottom-item">How it’s made?</li>
+            <li class="bottom-item">Our products</li>
+            <li class="bottom-item">Top sellers</li>
+            <li class="bottom-item">Chocolate is loved</li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </body>
