@@ -2,10 +2,10 @@
   --logo-color: #111;
   --nav-color: #111;
   --title-color: #fff;
-  --hover-color: #FD9222;
-  --info-text-color: rgba(255, 255, 255, 0.70);
+  --hover-color: #fd9222;
+  --info-text-color: rgba(255, 255, 255, 0.7);
   --text-color: rgba(17, 17, 17, 0.7);
-  --hover_text-color: #FD9222;
+  --hover_text-color: #fd9222;
 }
 .visually-hidden {
   position: absolute;
@@ -45,8 +45,20 @@ body {
   line-height: 20px;
   letter-spacing: -0.54px;
   margin-right: 188px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
-.header-logo::before {
+.header-icon {
+  width: 24px;
+  height: 24px;
+  fill: rgba(252, 241, 224, 1);
+  stroke: rgba(253, 146, 34, 1);
+}
+.header-icon:hover {
+  stroke: var(--logo-color);
+}
+/* .header-logo::before {
   content: "";
   background-image: url(../images/header-choco.webp);
   position: absolute;
@@ -54,7 +66,7 @@ body {
   width: 24px;
   height: 24px;
   right: 1075px;
-}
+} */
 .header-list {
   display: flex;
   gap: 24px;
@@ -73,6 +85,22 @@ body {
   display: flex;
   margin-left: 137px;
   gap: 18px;
+  fill: transparent;
+  stroke: var(--logo-color);
+}
+.header-svg-insta {
+  width: 24px;
+  height: 24px;
+}
+.header-svg-insta:hover {
+  stroke: var(--hover-color);
+}
+.header-svg-twitter {
+  width: 24px;
+  height: 24px;
+}
+.header-svg-twitter:hover {
+  stroke: var(--hover-color);
 }
 .hero-title {
   color: var(--title-color);
@@ -155,6 +183,27 @@ body {
   gap: 14px;
   align-items: center;
 }
+.hero-arrow {
+  width: 22px;
+  height: 22px;
+  fill: var(--hover-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-scroll:hover {
+  background-color: #fd9222;
+}
+.hero-scroll:hover .hero-arrow {
+  fill: var(--title-color);
+}
+.hero-scroll {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: var(--title-color);
+  border-radius: 50%;
+  align-items: center;
+}
 .info {
   background: #1e1823;
   padding-top: 50px;
@@ -175,7 +224,7 @@ body {
   line-height: normal;
   margin-bottom: 18px;
 }
-.info-subtitle::before {
+/* .info-subtitle::before {
   content: "";
   display: block;
   background-repeat: no-repeat;
@@ -185,11 +234,28 @@ body {
   border-radius: 365px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-position: center;
+} */
+.info-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--logo-color);
+  stroke: var(--hover-color);
+  margin-left: auto;
+  margin-right: auto;
 }
-.info-subtitle:hover::before {
+.info-box {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+  border-radius: 365px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
+/* .info-subtitle:hover::before {
   border-color: rgba(253, 146, 34, 1);
-}
-.info-item:first-child .info-subtitle::before {
+} */
+/* .info-item:first-child .info-subtitle::before {
   background-image: url(../images/info-chocolate.webp);
 }
 .info-item:nth-child(2) .info-subtitle::before {
@@ -197,7 +263,8 @@ body {
 }
 .info-item:nth-child(3) .info-subtitle::before {
   background-image: url(../images/la_utensil-spoon.webp);
-}
+} */
+
 .info-text {
   color: var(--info-text-color);
 
@@ -719,4 +786,13 @@ body {
   border-top: solid rgba(255, 255, 255, 0.1);
   margin-top: 58px;
   padding-top: 24px;
+}
+.footer-icon{
+  width: 24px;
+height: 24px;
+fill: var(--logo-color);
+stroke: var(--title-color);
+}
+.footer-icon:hover{
+  stroke: var(--hover-color);
 }
