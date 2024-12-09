@@ -787,12 +787,37 @@ body {
   margin-top: 58px;
   padding-top: 24px;
 }
-.footer-icon{
+.footer-icon {
   width: 24px;
-height: 24px;
-fill: var(--logo-color);
-stroke: var(--title-color);
+  height: 24px;
+  fill: var(--logo-color);
+  stroke: var(--title-color);
 }
-.footer-icon:hover{
+.footer-icon:hover {
   stroke: var(--hover-color);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(253, 146, 34, 0.5);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 517px;
+  height: 628px;
+  border-radius: 15px;
+  background: #fafafa;
+  transform: translate(-50%, -50%);
+}
+.modal-title{
+
 }
