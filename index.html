@@ -19,7 +19,8 @@
     />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/model-rewiew.css">
+    <link rel="stylesheet" href="./styles/model-rewiew.css" />
+    <link rel="stylesheet" href="./styles/js/modal.js" />
   </head>
   <body>
     <!-- header -->
@@ -169,6 +170,30 @@
           </p>
           <ul class="ingredient-list">
             <li class="ingredient-item">
+              <div class="ingredient-overlay">
+                <h2 class="overlay-title">Milk chocolate</h2>
+                <ul class="overlay-list">
+                  <li class="overlay-item">
+                    <button class="overlay-chocolate" type="button">
+                      chocolate
+                    </button>
+                  </li>
+                  <li class="overlay-item">
+                    <button class="overlay-benefits" type="button">
+                      the benefits
+                    </button>
+                  </li>
+                </ul>
+                <div class="overlay-box">
+                  <p class="overlay-text">
+                    Milk chocolate is a solid chocolate confectionery containing
+                    cocoa, sugar and milk. It is the most consumed type of
+                    chocolate. Chocolate was originally sold and consumed as a
+                    beverage in pre-Columbian times. Although four-fifths of all
+                    milk chocolate is sold in the United States and Europe.
+                  </p>
+                </div>
+              </div>
               <img
                 class="ingredient-img ingredient-img1"
                 src="./images/ingredients-chocolate.webp"
@@ -177,6 +202,31 @@
               <h3 class="ingredient-subtitle">MILK CHOCOLATE</h3>
             </li>
             <li class="ingredient-item">
+              <div class="ingredient-overlay">
+                <h2 class="overlay-title">Milk</h2>
+                <ul class="overlay-list">
+                  <li class="overlay-item">
+                    <button class="overlay-chocolate" type="button">
+                      milk
+                    </button>
+                  </li>
+                  <li class="overlay-item">
+                    <button class="overlay-benefits" type="button">
+                      the benefits
+                    </button>
+                  </li>
+                </ul>
+                <div class="overlay-box">
+                  <p class="overlay-text">
+                    Milk is a white liquid food produced by the mammary glands
+                    of mammals. It is the primary source of nutrition for young
+                    mammals (including breastfed human infants) before they are
+                    able to digest solid food.Early-lactation milk, which is
+                    called colostrum, contains antibodies that strengthen the
+                    immune system.
+                  </p>
+                </div>
+              </div>
               <img
                 class="ingredient-img"
                 src="./images/ingredients-milk.webp"
@@ -185,6 +235,31 @@
               <h3 class="ingredient-subtitle">MILK</h3>
             </li>
             <li class="ingredient-item">
+              <div class="ingredient-overlay">
+                <h2 class="overlay-title">NUTS</h2>
+                <ul class="overlay-list">
+                  <li class="overlay-item">
+                    <button class="overlay-chocolate" type="button">
+                      nuts
+                    </button>
+                  </li>
+                  <li class="overlay-item">
+                    <button class="overlay-benefits" type="button">
+                      the benefits
+                    </button>
+                  </li>
+                </ul>
+                <div class="overlay-box">
+                  <p class="overlay-text">
+                    Almonds, pistachios, and walnuts are some types of nuts that
+                    contain healthy nutrients. When eaten as part of a
+                    nutrient-dense diet, these 9 nuts may offer benefits such as
+                    reducing your risk of heart disease. They’re a good source
+                    of fiber, healthy fats, and plant protein. Plus, they’re
+                    great on their own.
+                  </p>
+                </div>
+              </div>
               <img
                 class="ingredient-img"
                 src="./images/ingredients-nuts.webp"
@@ -193,6 +268,31 @@
               <h3 class="ingredient-subtitle">NUTS</h3>
             </li>
             <li class="ingredient-item">
+              <div class="ingredient-overlay">
+                <h2 class="overlay-title">semi - sweet chocolate</h2>
+                <ul class="overlay-list">
+                  <li class="overlay-item">
+                    <button class="overlay-chocolate" type="button">
+                      sweet chocolate
+                    </button>
+                  </li>
+                  <li class="overlay-item">
+                    <button class="overlay-benefits" type="button">
+                      the benefits
+                    </button>
+                  </li>
+                </ul>
+                <div class="overlay-box">
+                  <p class="overlay-text">
+                    Almonds, pistachios, and walnuts are some types of nuts that
+                    contain healthy nutrients. When eaten as part of a
+                    nutrient-dense diet, these 9 nuts may offer benefits such as
+                    reducing your risk of heart disease. They’re a good source
+                    of fiber, healthy fats, and plant protein. Plus, they’re
+                    great on their own.
+                  </p>
+                </div>
+              </div>
               <img
                 class="ingredient-img"
                 src="./images/ingredients-semi.webp"
@@ -359,7 +459,9 @@
               </div>
             </li>
           </ul>
-          <button type="button" class="users-button">Leave a review</button>
+          <button data-rewiew-open type="button" class="users-button">
+            Leave a review
+          </button>
         </div>
       </section>
       <!-- experience -->
@@ -372,7 +474,9 @@
             Made with only the finest ingredients and handcrafted with the
             utmost care, each piece is a work of art that is sure to please.
           </p>
-          <button type="button" class="experience-button">Subscribe</button>
+          <button data-modal-open type="button" class="experience-button">
+            Subscribe
+          </button>
         </div>
       </section>
     </main>
@@ -428,10 +532,63 @@
       </div>
     </footer>
     <!-- rewiew-model-window -->
-    <div class="backdrop">
+    <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <h2 class="modal-title">LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span></h2>
+        <button data-modal-close type="button" class="modal-close">
+          <svg class="modal-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">
+          <span class="modal-block">Explore our</span>
+          <span class="modal-span"> new chocolate</span> first!
+        </h2>
+        <form class="modal-form">
+          <input
+            class="modal-input"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <button class="modal-button" type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
+    <div data-rewiew class="backdrop is-hidden">
+      <div class="rewiew-modal">
+        <button data-rewiew-close type="button" class="rewiew-button">
+          <svg class="rewiew-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="rewiew-title">
+          LEAVE A REVIEW ABOUT <span class="rewiew-span">OUR CHOCOLATE</span>
+        </h2>
+        <form class="rewiew-form">
+          <ul class="rewiew-list">
+            <li class="rewiew-item">
+              <input class="rewiew-input" placeholder="Name" type="text" />
+            </li>
+            <li class="rewiew-item">
+              <input class="rewiew-input" placeholder="Email" type="email" />
+            </li>
+            <li class="rewiew-item rewiew-relative">
+              <img class="rewiew-img" src="./images/ua.webp" alt="rs6" />
+              <p class="rewiew-number">+380</p>
+              <input
+                class="rewiew-input rewiew-ua"
+                placeholder="Phone number"
+                type="number"
+              />
+            </li>
+            <li class="rewiew-item"> 
+              <input class="rewiew-input  rewiew-entertext" placeholder="Enter text" type="text" />
+            </li>
+          </ul>
+          <button class="rewiew-send" type="button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./styles/js/modal.js" type="module"></script>
+    <script src="./styles/js/modal-rewiew.js" type="module"></script>
   </body>
 </html>
