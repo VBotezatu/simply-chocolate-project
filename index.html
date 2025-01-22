@@ -418,7 +418,9 @@
               and was first discovered by the Native American tribe called the
               Mayans.
             </p>
-            <button type="button" class="sellers-button">Buy now</button>
+            <button data-buy-open type="button" class="sellers-button">
+              Buy now
+            </button>
           </div>
         </div>
       </section>
@@ -553,6 +555,7 @@
         </form>
       </div>
     </div>
+    <!-- aaaaaa -->
     <div data-rewiew class="backdrop is-hidden">
       <div class="rewiew-modal">
         <button data-rewiew-close type="button" class="rewiew-button">
@@ -580,15 +583,60 @@
                 type="number"
               />
             </li>
-            <li class="rewiew-item"> 
-              <input class="rewiew-input  rewiew-entertext" placeholder="Enter text" type="text" />
+            <li class="rewiew-item">
+              <input
+                class="rewiew-input rewiew-entertext"
+                placeholder="Enter text"
+                type="text"
+              />
             </li>
           </ul>
           <button class="rewiew-send" type="button">Send</button>
         </form>
       </div>
     </div>
+    <!-- buy -->
+    <div data-buy class="backdrop is-hidden">
+      <div class="buy-modal">
+        <button data-buy-close type="button" class="buy-close">
+          <svg class="buy-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="buy-title"><span class="buy-span">buy</span> now</h2>
+        <ul class="buy-list">
+          <li class="buy-item">
+            <img
+              class="buy-img"
+              src="./images/buy-chocolate.webp"
+              alt="choco"
+            />
+            <button class="buy-button" type="button">100g</button>
+          </li>
+          <li class="buy-item">
+            <img class="buy-img" src="./images/white-buy.webp" alt="choco" />
+            <button class="buy-button" type="button">200g</button>
+          </li>
+          <li class="buy-item">
+            <img class="buy-img" src="./images/big-buy.webp" alt="choco" />
+            <button class="buy-button" type="button">300g</button>
+          </li>
+        </ul>
+        <form class="buy-form">
+          <ul class="buy-form-list">
+            <li class="buy-form-item">
+              <!-- <label class="buy-form-label" for="">Personal information</label> -->
+              <input class="buy-form-input" placeholder="Name" type="text" />
+            </li>
+            <li class="buy-form-item">
+              <input class="buy-form-input" placeholder="Surname" type="text" />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
     <script src="./styles/js/modal.js" type="module"></script>
     <script src="./styles/js/modal-rewiew.js" type="module"></script>
+    <script src="./styles/js/modal-buy.js" type="module"></script>
   </body>
 </html>
