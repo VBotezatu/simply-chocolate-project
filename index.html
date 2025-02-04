@@ -35,19 +35,19 @@
         <nav>
           <ul class="header-list">
             <li class="header-item">
-              <a href="" class="header-link">Home</a>
+              <a href="#hero" class="header-link">Home</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">How it’s made?</a>
+              <a  href="#process" class="header-link">How it’s made?</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">Our products</a>
+              <a href="#products" class="header-link">Our products</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">Top sellers</a>
+              <a href="#sellers" class="header-link">Top sellers</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">Chocolate is loved</a>
+              <a href="#users" class="header-link">Chocolate is loved</a>
             </li>
           </ul>
         </nav>
@@ -72,7 +72,7 @@
     <!-- main -->
     <main class="main">
       <!-- hero -->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment
@@ -357,7 +357,7 @@
         </div>
       </section>
       <!-- products -->
-      <section class="products">
+      <section class="products" id="products">
         <div class="container">
           <h2 class="products-title">
             OUR <span class="products-span">PRODUCTS</span>
@@ -425,7 +425,7 @@
         </div>
       </section>
       <!-- users -->
-      <section class="users">
+      <section class="users" id="users">
         <div class="container">
           <h2 class="users-title">
             <span class="users-span">CHOCOLATE</span> IS LOVED
@@ -433,6 +433,11 @@
           <ul class="users-list">
             <li class="users-item">
               <div class="users-box">
+                <img
+                  class="users-img"
+                  src="./images/dobr.webp"
+                  alt="victoria"
+                />
                 <h3 class="users-subtitle">Victoria Dobrzhanska</h3>
                 <p class="users-text">
                   I love this chocolate bar. Perfect combination of light crispy
@@ -442,6 +447,11 @@
             </li>
             <li class="users-item">
               <div class="users-box">
+                <img
+                  class="users-img"
+                  src="./images/babe.webp"
+                  alt="victoria"
+                />
                 <h3 class="users-subtitle">Nazar Babenko</h3>
                 <p class="users-text">
                   This chocolate confection is a delight! A delight! The wafer
@@ -452,6 +462,11 @@
             </li>
             <li class="users-item">
               <div class="users-box">
+                <img
+                  class="users-img"
+                  src="./images/kamp.webp"
+                  alt="victoria"
+                />
                 <h3 class="users-subtitle">Olena Kampusch</h3>
                 <p class="users-text">
                   Chocolate is a family favourite treat. Love the delicious
@@ -591,7 +606,9 @@
               />
             </li>
           </ul>
-          <button class="rewiew-send" type="button">Send</button>
+          <button data-feedback-open class="rewiew-send" type="submit">
+            Send
+          </button>
         </form>
       </div>
     </div>
@@ -622,21 +639,108 @@
             <button class="buy-button" type="button">300g</button>
           </li>
         </ul>
-        <form class="buy-form">
+        <form data-form class="buy-form">
           <ul class="buy-form-list">
             <li class="buy-form-item">
-              <!-- <label class="buy-form-label" for="">Personal information</label> -->
-              <input class="buy-form-input" placeholder="Name" type="text" />
+              <label class="buy-form-label" for="personal"
+                >Personal information</label
+              >
+              <input
+                id="personal"
+                class="buy-form-input"
+                placeholder="Name"
+                type="text"
+              />
             </li>
             <li class="buy-form-item">
-              <input class="buy-form-input" placeholder="Surname" type="text" />
+              <input
+                class="buy-form-input buy-form-inpu1"
+                placeholder="Surname"
+                type="text"
+              />
             </li>
           </ul>
+          <ul class="buy-form-list2">
+            <li class="buy-form-item2">
+              <label class="buy-form-label2" for="email">Email</label>
+              <input
+                id="email"
+                class="buy-form-input2"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </li>
+            <li class="buy-form-item2 buy-form-item23">
+              <img class="buy-form-img2" src="./images/ua.webp" alt="d" />
+              <p class="buy-form-number2">+380</p>
+              <label class="buy-form-label2" for="phone">Phone number</label>
+              <input
+                id="phone"
+                class="buy-form-input2 buy-form-input23"
+                type="tel"
+                placeholder="Phone number"
+              />
+            </li>
+            <li class="buy-form-item2 buy-form-item24">
+              <img
+                class="buy-form-img21"
+                src="./images/mastercard.webp"
+                alt=""
+              />
+              <label class="buy-form-label2" for="card">Card number</label>
+              <input
+                id="card"
+                class="buy-form-input2"
+                type="number"
+                placeholder="Enter card"
+              />
+            </li>
+            <li class="buy-form-item2">
+              <label class="buy-form-label2" for="comment">Comment</label>
+              <input
+                id="comment"
+                class="buy-form-input2 buy-form-input18"
+                type="text"
+                placeholder="Enter text"
+              />
+            </li>
+          </ul>
+          <button data-thanks-open class="buy-form-button" type="submit">
+            Submit
+          </button>
         </form>
+      </div>
+    </div>
+    <div data-feedback class="backdrop is-hidden">
+      <div class="feedback-modal">
+        <button data-feedback-close type="button" class="rewiew-button">
+          <svg class="rewiew-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="feedback-modal-title">
+          <span class="feedback-modal-span">thank you</span>for your feedback!
+        </h2>
+        <p class="feedback-modal-text">We are so happy to hear from you!</p>
+      </div>
+    </div>
+    <div data-thanks class="backdrop is-hidden">
+      <div class="feedback-modal">
+        <button data-thanks-close type="button" class="rewiew-button">
+          <svg class="rewiew-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="feedback-modal-title">
+          <span class="feedback-modal-span">thank you</span>for your feedback!
+        </h2>
+        <p class="feedback-modal-text">We are so happy to hear from you!</p>
       </div>
     </div>
     <script src="./styles/js/modal.js" type="module"></script>
     <script src="./styles/js/modal-rewiew.js" type="module"></script>
     <script src="./styles/js/modal-buy.js" type="module"></script>
+    <script src="./styles/js/modal-feedback.js" type="module"></script>
+    <script src="./styles/js/modal-thanks.js" type="module"></script>
   </body>
 </html>

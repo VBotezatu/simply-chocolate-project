@@ -7,6 +7,9 @@
   --text-color: rgba(17, 17, 17, 0.7);
   --hover_text-color: #fd9222;
 }
+html{
+  scroll-behavior: smooth;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -21,6 +24,7 @@
 }
 body {
   font-family: Montserrat;
+  padding-top: 90px;
 }
 .container {
   max-width: 1168px;
@@ -44,6 +48,7 @@ body {
   backdrop-filter: blur(5px);
   box-shadow: 0px 2px 60px 0px rgb(249, 249, 249),
     0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 .header-logo {
   color: var(--logo-color);
@@ -690,7 +695,7 @@ body {
 .users-box {
   width: 360px;
   border-radius: 15px;
-  border: 1px solid var(--text-color);
+  border: 1px solid rgba(17, 17, 17, 0.1);
   background: var(--title-color);
   box-shadow: 0px 9.049px 26.572px 0px rgba(215, 228, 249, 0.25);
   min-height: 200px;
@@ -698,6 +703,14 @@ body {
   padding-right: 24px;
   padding-bottom: 24px;
   padding-top: 56px;
+  position: relative;
+}
+.users-img {
+  position: absolute;
+  bottom: 160px;
+  right: 140px;
+  width: 80px;
+  height: 80px;
 }
 .users-button {
   display: flex;
@@ -1111,7 +1124,7 @@ body {
 }
 .buy-modal {
   width: 609px;
-  height: 800px;
+  height: 100vh;
   border-radius: 15px;
   background: #fafafa;
   position: absolute;
@@ -1119,12 +1132,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 48px;
+  overflow-y: scroll;
 }
 .buy-icon {
   width: 28px;
   height: 28px;
-  fill: black;
-  stroke: black;
+  stroke-width: 2px;
+  stroke: #111;
 }
 .buy-close {
   position: absolute;
@@ -1206,7 +1220,6 @@ body {
   align-self: stretch;
   border-radius: 13px;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
-  box-shadow: 0px 5.445px 5.445px 0px;
   color: rgba(64, 64, 64, 0.3);
   font-family: Montserrat;
   font-size: 18px;
@@ -1215,7 +1228,139 @@ body {
   line-height: normal;
   letter-spacing: -0.36px;
 }
-.buy-form-list{
+.buy-form-input:hover,
+.buy-form-input:focus {
+  box-shadow: 0px 5.445px 5.445px 0px;
+  outline: none;
+}
+.buy-form-list {
   display: flex;
   gap: 21px;
+  margin-bottom: 18px;
+}
+.buy-form-inpu1 {
+  margin-top: 26px;
+}
+.buy-form-label2 {
+  display: block;
+  margin-bottom: 8px;
+}
+.buy-form-input2 {
+  display: flex;
+  width: 513px;
+  padding: 22px 24px;
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  color: rgba(64, 64, 64, 0.3);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.buy-form-input2:hover {
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+  outline: none;
+}
+.buy-form-list2 {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+.buy-form-input23 {
+  padding-left: 145px;
+}
+.buy-form-item23 {
+  position: relative;
+}
+.buy-form-img2 {
+  width: 32px;
+  height: 24px;
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+}
+.buy-form-number2 {
+  width: 43px;
+  height: 22px;
+  position: absolute;
+  bottom: 22px;
+  left: 74px;
+}
+.buy-form-item24 {
+  position: relative;
+}
+.buy-form-img21 {
+  width: 44px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+  left: 450px;
+}
+.buy-form-input18 {
+  height: 137px;
+  display: flex;
+  width: 513px;
+  padding: 22px 24px 93px 24px;
+  align-items: flex-start;
+  gap: 40px;
+}
+.buy-form-button {
+  display: flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #fd9222;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 18px;
+}
+.feedback-modal {
+  width: 516px;
+  height: 414px;
+  border-radius: 15px;
+  background: #fd9222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/background-choco.webp);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.feedback-modal-title {
+  max-width: 276px;
+  color: #fcf1e0;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+}
+.feedback-modal-span {
+  display: block;
+}
+.feedback-modal-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  margin-top: 8px;
 }
