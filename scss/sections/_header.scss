@@ -1,0 +1,137 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  padding-top: 26px;
+  padding-bottom: 34px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 50%);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 2px 60px 0px rgb(249, 249, 249),
+    0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header-logo {
+  color: var(--logo-color);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.54px;
+  margin-right: 188px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  animation-name: move-logo;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.header-icon {
+  width: 24px;
+  height: 24px;
+  fill: rgba(252, 241, 224, 1);
+  stroke: rgba(253, 146, 34, 1);
+  transition: stroke 1000ms linear;
+}
+
+.header-icon:hover {
+  stroke: var(--logo-color);
+}
+.header-menu-list {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background-color: rgba(250, 250, 250, 25%);
+  box-shadow: 0px 9.049px 26.572px 0px rgba(215, 228, 249, 0.25);
+  padding: 5px;
+  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.header-menu {
+  position: relative;
+}
+
+.header-link-menu:hover + .header-menu-list {
+  opacity: 1;
+}
+
+.header-menu-link {
+  height: 12px;
+  color: #000;
+  text-shadow: 2px 3px 5px white;
+}
+
+.header-list {
+  display: flex;
+  gap: 24px;
+}
+
+.header-link {
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.28px;
+  position: relative;
+  transition: color 500ms linear;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--hover_text-color);
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.header-link:hover::after {
+  opacity: 1;
+}
+
+.header-link:hover {
+  color: var(--hover_text-color);
+}
+
+.header-socials {
+  display: flex;
+  margin-left: 137px;
+  gap: 18px;
+  fill: transparent;
+  stroke: var(--logo-color);
+}
+
+.header-twitter:hover .header-svg-twitter {
+  stroke: var(--hover-color);
+}
+
+.header-insta:hover .header-svg-insta {
+  stroke: var(--hover-color);
+}
+
+.header-svg-insta {
+  width: 24px;
+  height: 24px;
+  transition: stroke 500ms linear;
+}
+
+.header-svg-twitter {
+  width: 24px;
+  height: 24px;
+  transition: stroke 500ms linear;
+}
