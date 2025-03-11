@@ -1,60 +1,56 @@
-
 .sellers {
   padding-bottom: 128px;
-}
-.sellers-title {
-  color: #111;
-
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  text-align: center;
-}
-.sellers-span {
-  color: var(--hover_text-color);
-  text-align: center;
-
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-}
-.sellers-list {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-.sellers-box {
-  display: flex;
-  gap: 567px;
-}
-.sellers-text {
-  color: #111;
-
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.28px;
-  max-width: 407px;
-}
-.sellers-button {
-  border-radius: 100px;
-  background: var(--hover_text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 162px;
-  color: var(--title-color);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: normal;
-  transition: background-color 500ms linear, color 500ms linear;
-}
-.sellers-button:hover {
-  background-color: #fcf1e0;
-  color: var(--hover_text-color);
+  &__title {
+    color: $logo-color;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__span {
+    color: $hover_text-color;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  &__box {
+    display: flex;
+    gap: 567px;
+  }
+  &__text {
+    color: $logo-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    max-width: 407px;
+  }
+  &__button {
+    border-radius: 100px;
+    background: $hover_text-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 162px;
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    transition: background-color 500ms linear, color 500ms linear;
+    &:hover {
+      background-color: $title-color;
+      color: $hover_text-color;
+    }
+  }
 }
