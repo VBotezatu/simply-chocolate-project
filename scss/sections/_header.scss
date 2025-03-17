@@ -43,7 +43,7 @@
   &__menu {
     position: relative;
   }
-  &__menulist {
+  &__options {
     position: absolute;
     left: 0;
     top: 30px;
@@ -56,10 +56,10 @@
     opacity: 0;
     transition: opacity 500ms linear;
   }
-  &__product:hover + &__menulist {
+  &__link:hover + &__menulist {
     opacity: 1;
   }
-  &__product {
+  &__link {
     height: 12px;
     color: $logo-color;
     text-shadow: 2px 3px 5px white;
@@ -68,7 +68,7 @@
     display: flex;
     gap: 24px;
   }
-  &__link {
+  &__page {
     color: $logo-color;
     font-size: 14px;
     font-weight: 500;
@@ -102,21 +102,21 @@
     fill: transparent;
     stroke: $logo-color;
   }
-  &__svginsta {
+  &__insta {
     width: 24px;
     height: 24px;
     transition: stroke 500ms linear;
   }
 
-  &__svgtwitter {
+  &__twitter {
     width: 24px;
     height: 24px;
     transition: stroke 500ms linear;
   }
-  &__twitter:hover &__svgtwitter {
+  &__twitt:hover &__twitter {
     stroke: $hover-color;
   }
-  &__insta:hover &__svginsta {
+  &__instagram:hover &__insta {
     stroke: $hover-color;
   }
 }

@@ -1,5 +1,5 @@
 
-.feedback-modal {
+.feedback {
   width: 516px;
   height: 414px;
   border-radius: 15px;
@@ -16,8 +16,7 @@
   flex-direction: column;
   transform: scale(1, 1) rotate(0) translate(-50%, -50%);
   transition: transform 500ms linear;
-}
-.feedback-modal-title {
+  &__title {
   max-width: 276px;
   color: #fcf1e0;
   font-family: Montserrat;
@@ -31,10 +30,10 @@
   top: 163px;
   left: 170px;
 }
-.feedback-modal-span {
+&__span {
   display: block;
 }
-.feedback-modal-text {
+&__text {
   color: #fff;
   font-family: Montserrat;
   font-size: 18px;
@@ -47,3 +46,6 @@
   bottom: 163px;
   left: 170px;
 }
+}
+
+

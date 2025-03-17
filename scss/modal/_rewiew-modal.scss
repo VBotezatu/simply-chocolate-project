@@ -1,5 +1,4 @@
-
-.rewiew-modal {
+.rewiew {
   width: 517px;
   /* height: 628px; */
   border-radius: 15px;
@@ -10,112 +9,112 @@
   padding: 40px;
   transform: scale(1, 1) rotate(0) translate(-50%, -50%);
   transition: transform 500ms linear;
-}
-.rewiew-icon {
-  width: 28px;
-  height: 28px;
-  fill: black;
-  stroke: black;
-}
-.rewiew-button {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background-color: transparent;
-}
-.rewiew-title {
-  color: #111;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-  max-width: 298px;
-  margin-bottom: 40px;
-}
-.rewiew-span {
-  color: #fd9222;
-}
-.rewiew-input {
-  display: flex;
-  padding: 22px 24px;
-  align-items: flex-start;
-  gap: 40px;
-  align-self: stretch;
-  border-radius: 13px;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
-  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
-  width: 437px;
-  color: rgba(64, 64, 64, 0.3);
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.36px;
-}
-.rewiew-list {
-  display: flex;
-  gap: 18px;
-  flex-direction: column;
-}
-.rewiew-img {
-  width: 32px;
-  height: 24px;
-  position: absolute;
-  bottom: 17px;
-  left: 24px;
-}
-.rewiew-ua {
-  padding-left: 176px;
-}
-.rewiew-number {
-  color: #000;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.36px;
-  position: absolute;
-  left: 74px;
-  bottom: 17px;
-}
-.rewiew-ua::before {
-  content: "";
-  height: 32px;
-  width: 3px;
-  background-color: gray;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-}
-.rewiew-relative {
-  position: relative;
-}
-.rewiew-entertext {
-  height: 137px;
-  display: flex;
-  width: 437px;
-  padding: 22px 24px 93px 24px;
-  align-items: flex-start;
-  gap: 40px;
-}
-.rewiew-send {
-  display: inline-flex;
-  padding: 14px 40px;
-  align-items: flex-start;
-  gap: 14px;
-  border-radius: 100px;
-  background: #fd9222;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-top: 32px;
+  &__icon {
+    width: 28px;
+    height: 28px;
+    fill: black;
+    stroke: black;
+  }
+  &__button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+  }
+  &__title {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+    max-width: 298px;
+    margin-bottom: 40px;
+  }
+  &__span {
+    color: #fd9222;
+  }
+  &__input {
+    display: flex;
+    padding: 22px 24px;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    border-radius: 13px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+    width: 437px;
+    color: rgba(64, 64, 64, 0.3);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.36px;
+  }
+  &__list {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+  }
+  &__img {
+    width: 32px;
+    height: 24px;
+    position: absolute;
+    bottom: 17px;
+    left: 24px;
+  }
+  &__ua {
+    padding-left: 176px;
+  }
+  &__number {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    position: absolute;
+    left: 74px;
+    bottom: 17px;
+  }
+  &__ua::before {
+    content: "";
+    height: 32px;
+    width: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  &__relative {
+    position: relative;
+  }
+  &__entertext {
+    height: 137px;
+    display: flex;
+    width: 437px;
+    padding: 22px 24px 93px 24px;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  &__send {
+    display: inline-flex;
+    padding: 14px 40px;
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 100px;
+    background: #fd9222;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 32px;
+  }
 }
