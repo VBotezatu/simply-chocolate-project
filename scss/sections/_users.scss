@@ -1,18 +1,13 @@
 .users {
-  padding-bottom: 128px;
+  @include section-padding($bottom: 128px);
   &__title {
     color: $nav-color;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include span();
     text-align: center;
     margin-bottom: 90px;
   }
   &__list {
-    display: flex;
-    gap: 28px;
+    @include flexbox($space: 28px);
   }
   &__subtitle {
     color: $nav-color;
@@ -23,14 +18,8 @@
     margin-bottom: 24px;
   }
   &__text {
-    color: rgba(17, 17, 17, 0.7);
-    text-align: center;
-
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.28px;
-    text-align: center;
+    @include footer-text();
+    color: black;
   }
   &__box {
     width: 360px;
@@ -39,10 +28,7 @@
     background: $title-color;
     box-shadow: 0px 9.049px 26.572px 0px rgba(215, 228, 249, 0.25);
     min-height: 200px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    padding-top: 56px;
+    @include section-padding($left: 24px, $right: 24px, $bottom: 24px, $top: 56px);
     position: relative;
   }
   &__img {
@@ -53,14 +39,11 @@
     height: 80px;
   }
   &__button {
-    display: flex;
+    @include flexbox($space: 14px, $horizontal: center, $alignment: flex-start);
+    flex-shrink: 0;
     width: 222px;
     height: 50px;
     padding: 14px 40px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 14px;
-    flex-shrink: 0;
     border-radius: 100px;
     border: 1px solid $hover_text-color;
     color: $nav-color;
@@ -80,10 +63,6 @@
   &__span {
     color: $hover_text-color;
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include span();
   }
 }

@@ -1,13 +1,7 @@
 .products {
-  padding-bottom: 128px;
+  @include section-padding($bottom: 128px);
   &__title {
-    color: $nav-color;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px; /* 116.667% */
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include section-title();
     margin-bottom: 50px;
   }
   &__item {
@@ -21,18 +15,13 @@
   }
   &_span {
     color: $hover_text-color;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include span();
   }
   &__img {
     max-width: 230px;
   }
   &__list {
-    display: flex;
-    gap: 18px;
+    @include flexbox($space: 18px);
     &::after {
       content: "";
       background-image: url(../images/products-banner.webp);
@@ -57,18 +46,13 @@
     margin-top: 2px;
   }
   &__button {
-    display: flex;
+    @include flexbox($space: 14px, $alignment: flex-start);
     padding: 8px 20px;
-    align-items: flex-start;
-    gap: 14px;
     border-radius: 100px;
     border: 1px solid rgba(17, 17, 17, 0.1);
     background: $title-color;
     color: $logo-color;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: normal;
+    @include text-14();
     margin-left: auto;
     margin-right: auto;
   }

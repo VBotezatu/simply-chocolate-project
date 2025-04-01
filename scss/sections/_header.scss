@@ -1,6 +1,5 @@
 .header {
-  padding-top: 26px;
-  padding-bottom: 34px;
+  @include section-padding($top: 26px, $bottom: 34px);
   position: fixed;
   top: 0;
   left: 0;
@@ -11,8 +10,7 @@
     0px 2px 30px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   &__container {
-    display: flex;
-    align-items: center;
+    @include flexbox($alignment: center);
   }
   &__logo {
     color: $logo-color;
@@ -22,9 +20,7 @@
     line-height: 20px;
     letter-spacing: -0.54px;
     margin-right: 188px;
-    display: flex;
-    gap: 4px;
-    align-items: center;
+    @include flexbox($space: 4px, $alignment: center);
     animation-name: move-logo;
     animation-duration: 1000ms;
     animation-iteration-count: infinite;
@@ -44,9 +40,7 @@
     position: relative;
   }
   &__options {
-    position: absolute;
-    left: 0;
-    top: 30px;
+    @include absolute($left: 0, $top: 30px);
     background-color: rgba(250, 250, 250, 25%);
     box-shadow: 0px 9.049px 26.572px 0px rgba(215, 228, 249, 0.25);
     padding: 5px;
@@ -65,20 +59,16 @@
     text-shadow: 2px 3px 5px white;
   }
   &__list {
-    display: flex;
-    gap: 24px;
+    @include flexbox($space: 24px);
   }
   &__page {
     color: $logo-color;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.28px;
+    @extend %navigation__text;
     position: relative;
     transition: color 500ms linear;
     &::after {
       content: "";
-      position: absolute;
+      @include absolute();
       display: block;
       width: 100%;
       height: 4px;
@@ -96,22 +86,17 @@
     }
   }
   &__socials {
-    display: flex;
+    @include flexbox($space: 18px);
     margin-left: 137px;
-    gap: 18px;
     fill: transparent;
     stroke: $logo-color;
   }
   &__insta {
-    width: 24px;
-    height: 24px;
-    transition: stroke 500ms linear;
+    @extend %icons;
   }
 
   &__twitter {
-    width: 24px;
-    height: 24px;
-    transition: stroke 500ms linear;
+    @extend %icons;
   }
   &__twitt:hover &__twitter {
     stroke: $hover-color;

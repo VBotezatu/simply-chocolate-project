@@ -1,0 +1,97 @@
+@mixin flexbox(
+  $space: 0px,
+  $alignment: flex-start,
+  $horizontal: flex-start,
+  $direction: row
+) {
+  align-items: $alignment;
+  display: flex;
+  gap: $space;
+  justify-content: $horizontal;
+  flex-direction: $direction;
+}
+@mixin section-title() {
+  color: $nav-color;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+@mixin button($size: normal) {
+  border-radius: 100px;
+  padding: 14px 40px;
+  background: $hover_text-color;
+  color: $title-color;
+  font-size: $size;
+  font-weight: 600;
+  line-height: normal;
+  transition: color 500ms linear, background-color 500ms linear;
+}
+@mixin footer-text() {
+  color: $title-color;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
+@mixin modal() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 500ms linear;
+  border-radius: 15px;
+  transform: scale(1, 1) rotate(0) translate(-50%, -50%);
+}
+@mixin absolute($top: normal, $left: normal) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin section-padding($top: 0, $bottom: 0, $left: 0, $right: 0) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+  padding-left: $left;
+  padding-right: $right;
+}
+@mixin title($normal:normal){
+      font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: $normal;
+}
+@mixin icon(){
+      width: 28px;
+    height: 28px;
+}
+@mixin span(){
+      font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+}
+@mixin text-18(){
+      font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.36px;
+}
+@mixin ingredient(){
+      font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+        padding: 6px 16px;
+    border-radius: 35px;
+        @include flexbox($space: 4px, $horizontal: center, $alignment: center);
+}
+@mixin text-14(){
+      font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

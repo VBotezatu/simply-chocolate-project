@@ -1,47 +1,30 @@
 .sellers {
-  padding-bottom: 128px;
+  @include section-padding($bottom: 128px);
   &__title {
-    color: $logo-color;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include section-title();
     margin-bottom: 50px;
-    text-align: center;
   }
   &__span {
     color: $hover_text-color;
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include span();
   }
   &__list {
-    display: flex;
-    gap: 16px;
+    @include flexbox($space: 16px);
     margin-bottom: 32px;
   }
   &__box {
-    display: flex;
-    gap: 567px;
+    @include flexbox($space: 567px);
   }
   &__text {
-    color: $logo-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.28px;
+    @include footer-text();
     max-width: 407px;
   }
   &__button {
     border-radius: 100px;
     background: $hover_text-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox($alignment: center, $horizontal: center);
+    padding: 14px 40px;
     min-width: 162px;
     color: $title-color;
     font-size: 18px;

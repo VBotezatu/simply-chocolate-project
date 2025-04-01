@@ -1,33 +1,20 @@
 .process {
-  padding-bottom: 128px;
+  @include section-padding($bottom: 128px);
   &__title {
-    color: $nav-color;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include section-title();
     margin-bottom: 50px;
   }
   &__span {
     color: $hover_text-color;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
+    @include span();
   }
   &__mainbox {
-    display: flex;
-    gap: 52px;
+    @include flexbox($space: 52px)
   }
   &__box {
     width: 516px;
     height: 400px;
     padding: 32px;
-    justify-content: center;
-    align-items: center;
     flex-shrink: 0;
     border-radius: 15px;
     background: $title-color;
@@ -46,24 +33,17 @@
     margin-bottom: 28px;
   }
   &__list {
-    display: flex;
-    gap: 24px;
-    flex-direction: column;
+    @include flexbox($space: 24px, $direction: column);
   }
   &__text {
-    color: $nav-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.28px;
+    @include footer-text();
+    color: black;
     &::before {
       content: "";
       width: 8px;
       height: 8px;
       background-image: url(../images/made-elips.webp);
-      position: absolute;
-      top: 5px;
-      left: -20px;
+      @include absolute($top: 5px, $left: -20px);
     }
   }
 }

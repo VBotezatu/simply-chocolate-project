@@ -1,14 +1,12 @@
 
 .info {
   background: $nav-color;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  @include section-padding($top: 50px, $bottom: 50px);
   &__container {
   background-position: center;
 }
 &__list {
-  display: flex;
-  gap: 88px;
+  @include flexbox($space: 88px)
 }
 &__subtitle {
   color: $title-color;
@@ -31,16 +29,11 @@
   margin-bottom: 22px;
   border-radius: 365px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
+  @include flexbox( $alignment: center);
 }
 
 &__text {
-  color: $info-text-color;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.28px;
+  @include footer-text();
 }
 }
 

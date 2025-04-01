@@ -1,35 +1,21 @@
 .rewiew {
+  @include modal();
   width: 517px;
-  /* height: 628px; */
-  border-radius: 15px;
+  height: 631px;
   background: #fafafa;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   padding: 40px;
-  transform: scale(1, 1) rotate(0) translate(-50%, -50%);
-  transition: transform 500ms linear;
   &__icon {
-    width: 28px;
-    height: 28px;
+    @include icon();
     fill: black;
     stroke: black;
   }
   &__button {
-    position: absolute;
-    top: 24px;
-    right: 24px;
+    @include absolute($top: 24px, $left: 450px);
     background-color: transparent;
   }
   &__title {
-    color: #111;
-    font-family: Montserrat;
-    font-size: 24px;
+    @include section-title();
     font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
     max-width: 298px;
     margin-bottom: 40px;
   }
@@ -37,58 +23,38 @@
     color: #fd9222;
   }
   &__input {
-    display: flex;
+    @include flexbox($space: 40px, $alignment: flex-start);
     padding: 22px 24px;
-    align-items: flex-start;
-    gap: 40px;
     align-self: stretch;
     border-radius: 13px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
     width: 437px;
     color: rgba(64, 64, 64, 0.3);
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.36px;
+    @include text-18();
   }
   &__list {
-    display: flex;
-    gap: 18px;
-    flex-direction: column;
+    @include flexbox($space: 18px, $direction: column);
   }
   &__img {
     width: 32px;
     height: 24px;
-    position: absolute;
-    bottom: 17px;
-    left: 24px;
+    @include absolute($top: 23px, $left: 24px);
   }
   &__ua {
     padding-left: 176px;
   }
   &__number {
     color: #000;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.36px;
-    position: absolute;
-    left: 74px;
-    bottom: 17px;
+    @include text-18();
+    @include absolute($left: 74px, $top: 23px);
   }
   &__ua::before {
     content: "";
     height: 32px;
     width: 3px;
     background-color: gray;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include absolute($top: 0, $left: 0);
     display: block;
   }
   &__relative {
@@ -96,11 +62,9 @@
   }
   &__entertext {
     height: 137px;
-    display: flex;
+    @include flexbox($space: 40px, $alignment: flex-start);
     width: 437px;
     padding: 22px 24px 93px 24px;
-    align-items: flex-start;
-    gap: 40px;
   }
   &__send {
     display: inline-flex;
@@ -110,7 +74,6 @@
     border-radius: 100px;
     background: #fd9222;
     color: #fff;
-    font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
