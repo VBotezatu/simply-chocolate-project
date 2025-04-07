@@ -1,29 +1,40 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
-    font-family: Montserrat;
-    padding-top: 90px;
+  font-family: Montserrat;
+  padding-top: 90px;
 }
 
 .container {
-    max-width: 1168px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: auto;
-    margin-right: auto;
+    outline: solid red;
+  max-width: 355px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    max-width: 724px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1156px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
