@@ -12,7 +12,7 @@
   @media screen and (min-width: 768px) {
     @include section-padding($top: 24px, $bottom: 24px);
   }
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     @include section-padding($top: 24px, $bottom: 32px);
   }
   &__container {
@@ -20,26 +20,42 @@
   }
   &__logo {
     color: $logo-color;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.42px;
     font-style: italic;
     font-weight: 700;
-    line-height: 20px;
-    letter-spacing: -0.54px;
-    margin-right: 188px;
+    flex-shrink: 0;
     @include flexbox($space: 4px, $alignment: center);
     animation-name: move-logo;
     animation-duration: 1000ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    @media screen and (min-width: 1200px) {
+      margin-right: 188px;
+      font-size: 18px;
+      letter-spacing: -0.54px;
+      line-height: 20px;
+    }
   }
   &__icon {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     fill: rgba(252, 241, 224, 1);
     stroke: rgba(253, 146, 34, 1);
     transition: stroke 1000ms linear;
+    @media screen and (min-width: 1200px) {
+      width: 24px;
+      width: 24px;
+    }
     &:hover {
       stroke: $logo-color;
+    }
+  }
+  &__navigation {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
     }
   }
   &__menu {
@@ -92,7 +108,10 @@
     }
   }
   &__socials {
-    @include flexbox($space: 18px);
+    display: none;
+    @media screen and (min-width: 1200px) {
+      @include flexbox($space: 18px);
+    }
     margin-left: 137px;
     fill: transparent;
     stroke: $logo-color;
@@ -109,5 +128,12 @@
   }
   &__instagram:hover &__insta {
     stroke: $hover-color;
+  }
+  &__sidebar {
+    background: transparent;
+    margin-left: auto;
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
   }
 }

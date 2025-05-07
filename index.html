@@ -22,7 +22,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./styles/js/modal.js" />
   </head>
   <body>
@@ -35,7 +35,7 @@
             <use href="./images/symbol-defs.svg#icon-chocolate"></use>
           </svg>
         </a>
-        <nav>
+        <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item animate__animated animate__backInLeft">
               <a href="#hero" class="header__page">Home</a>
@@ -49,9 +49,7 @@
             <li
               class="header__item header__menu animate__animated animate__backInLeft"
             >
-              <a href="#sellers" class="header__page"
-                >Top sellers</a
-              >
+              <a href="#sellers" class="header__page">Top sellers</a>
               <ul class="header__options">
                 <li class="header__option">
                   <a class="header__link" href="">choco</a>
@@ -85,6 +83,23 @@
             </a>
           </li>
         </ul>
+        <button class="header__sidebar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              d="M3.5 14H24.5M3.5 7H24.5M3.5 21H24.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <!-- main -->
@@ -128,7 +143,9 @@
                     <use href="./images/symbol-defs.svg#icon-bar"></use>
                   </svg>
                 </div>
-                <h3 class="info__subtitle info__subtitle1">Unsurpassed taste</h3>
+                <h3 class="info__subtitle info__subtitle1">
+                  Unsurpassed taste
+                </h3>
                 <p class="info__text">
                   Crafted with the finest quality cocoa beans and a dedication
                   to perfection, each bite is a decadent experience that simply
@@ -176,7 +193,7 @@
       <!-- ingredient -->
       <section class="ingredient">
         <div class="container ingredients__container">
-          <h2 class="ingredient__title" data-aos="fade-right" >
+          <h2 class="ingredient__title" data-aos="fade-right">
             IT ALL ADDS UP TO ONE EXCEPTIONAL
             <span class="ingredient__title__span">TASTE</span> SENSATION
           </h2>
@@ -187,8 +204,7 @@
             step of our process adds up to one exceptional taste sensation.
           </p>
           <ul class="ingredient__list">
-            <li class="ingredient__item"  data-aos="zoom-in">
-              <!-- overlay -->
+            <li class="ingredient__item" data-aos="zoom-in">
               <div class="overlay">
                 <h2 class="overlay__title">Milk chocolate</h2>
                 <ul class="overlay__list">
@@ -220,8 +236,7 @@
               />
               <h3 class="ingredient__subtitle">MILK CHOCOLATE</h3>
             </li>
-            <li class="ingredient__item"  data-aos="zoom-in">
-              <!-- overlay -->
+            <li class="ingredient__item" data-aos="zoom-in">
               <div class="overlay">
                 <h2 class="overlay__title">Milk</h2>
                 <ul class="overlay__list">
@@ -254,7 +269,7 @@
               />
               <h3 class="ingredient__subtitle">MILK</h3>
             </li>
-            <li class="ingredient__item"  data-aos="zoom-in">
+            <li class="ingredient__item" data-aos="zoom-in">
               <div class="overlay">
                 <h2 class="overlay__title">NUTS</h2>
                 <ul class="overlay__list">
@@ -287,7 +302,7 @@
               />
               <h3 class="ingredient__subtitle">NUTS</h3>
             </li>
-            <li class="ingredient__item"  data-aos="zoom-in">
+            <li class="ingredient__item" data-aos="zoom-in">
               <div class="overlay">
                 <h2 class="overlay__title">semi - sweet chocolate</h2>
                 <ul class="overlay__list">
@@ -336,7 +351,7 @@
               alt="video-chocolate"
             />
             <div class="process__box">
-              <h3 class="process__subtitle"  data-aos="fade-up">
+              <h3 class="process__subtitle" data-aos="fade-up">
                 Try our chocolates today and discover the perfect balance of
                 flavor
               </h3>
@@ -365,7 +380,7 @@
                     Heat the mixture over low heat, letting it barely boil.
                   </p>
                 </li>
-                <li class="process__item"  data-aos="zoom-out-left">
+                <li class="process__item" data-aos="zoom-out-left">
                   <p class="process__text">
                     Pour the chocolate into special containers (can be replaced
                     with ice molds). Allow to cool and harden.
@@ -422,13 +437,31 @@
           </h2>
           <ul class="sellers__list">
             <li class="sellers__item">
-              <img src="./images/coffe.webp" alt="chocolate" />
+              <img
+                class="sellers__img"
+                src="./images/coffe.webp"
+                alt="chocolate"
+              />
             </li>
             <li class="sellers__item">
-              <img src="./images/zukati.webp" alt="chocolate" />
+              <p class="sellers__textmobile">
+                Crazy enough chocolate originates from a bean just like the
+                coffee bean called Cacao. Cacao has been around for thousands of
+                years and was first discovered by the Native American tribe
+                called the Mayans.
+              </p>
+              <img
+                class="sellers__img"
+                src="./images/zukati.webp"
+                alt="chocolate"
+              />
             </li>
             <li class="sellers__item">
-              <img src="./images/dark.webp" alt="chocolate" />
+              <img
+                class="sellers__img"
+                src="./images/dark.webp"
+                alt="chocolate"
+              />
             </li>
           </ul>
           <div class="sellers__box">
@@ -569,7 +602,7 @@
       </div>
     </footer>
     <!-- rewiew-model-window -->
-    <div data-modal class="backdrop is-hidden">
+    <!-- <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close type="button" class="modal__close">
           <svg class="modal__icon">
@@ -590,9 +623,9 @@
           <button class="modal__button" type="submit">Subscribe</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <!-- aaaaaa -->
-    <div data-rewiew class="backdrop is-hidden">
+    <!-- <div data-rewiew class="backdrop is-hidden">
       <div class="rewiew">
         <button data-rewiew-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -644,9 +677,9 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
     <!-- buy -->
-    <div data-buy class="backdrop is-hidden">
+    <!-- <div data-buy class="backdrop is-hidden">
       <div class="buy">
         <button data-buy-close type="button" class="buy__close">
           <svg class="buy__icon">
@@ -749,8 +782,8 @@
           </button>
         </form>
       </div>
-    </div>
-    <div data-feedback class="backdrop is-hidden">
+    </div> -->
+    <!-- <div data-feedback class="backdrop is-hidden">
       <div class="feedback">
         <button data-feedback-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -762,8 +795,8 @@
         </h2>
         <p class="feedback__text">We are so happy to hear from you!</p>
       </div>
-    </div>
-    <div data-thanks class="backdrop is-hidden">
+    </div> -->
+    <!-- <div data-thanks class="backdrop is-hidden">
       <div class="feedback">
         <button data-thanks-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -775,7 +808,7 @@
         </h2>
         <p class="feedback__text">We are so happy to hear from you!</p>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js" type="module"></script>
     <script src="./js/modal-rewiew.js" type="module"></script>
     <script src="./js/modal-buy.js" type="module"></script>

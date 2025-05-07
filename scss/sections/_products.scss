@@ -26,6 +26,11 @@
       content: "";
       background-image: url(../images/products-banner.webp);
     }
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
   }
   &__subtitle {
     color: $nav-color;

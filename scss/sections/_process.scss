@@ -9,7 +9,18 @@
     @include span();
   }
   &__mainbox {
-    @include flexbox($space: 52px)
+    @include flexbox($space: 52px);
+    flex-direction: column;
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+  &__img {
+    max-width: 335px;
+    @media screen and (min-width: 1200px) {
+      max-width: 600px;
+      height: 400px;
+    }
   }
   &__box {
     width: 516px;
@@ -31,6 +42,10 @@
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 28px;
+    max-width: 307px;
+    @media screen and (min-width: 1200px) {
+      max-width: 350px;
+    }
   }
   &__list {
     @include flexbox($space: 24px, $direction: column);
@@ -44,6 +59,10 @@
       height: 8px;
       background-image: url(../images/made-elips.webp);
       @include absolute($top: 5px, $left: -20px);
+    }
+    max-width: 291px;
+    @media screen and (min-width: 1200px) {
+      max-width: 409px;
     }
   }
 }

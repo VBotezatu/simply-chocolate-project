@@ -1,5 +1,9 @@
 .sellers {
   @include section-padding($bottom: 128px);
+  flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
   &__title {
     @include section-title();
     margin-bottom: 50px;
@@ -9,16 +13,53 @@
     text-align: center;
     @include span();
   }
+  &__img {
+    max-width: 335px;
+    @media screen and (min-width: 1200px) {
+      max-width: 368px;
+    }
+  }
   &__list {
     @include flexbox($space: 16px);
     margin-bottom: 32px;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__item:nth-child(3) {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+  &__textmobile {
+    padding-bottom: 32px;
+    padding-top: 20px;
+    @include footer-text();
+    color: black;
+    max-width: 407px;
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
   }
   &__box {
-    @include flexbox($space: 567px);
+    @include flexbox($space: 20px);
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      gap: 567px;
+    }
   }
   &__text {
     @include footer-text();
+    color: black;
     max-width: 407px;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      text-align: left;
+    }
   }
   &__button {
     border-radius: 100px;
@@ -34,6 +75,12 @@
     &:hover {
       background-color: $title-color;
       color: $hover_text-color;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

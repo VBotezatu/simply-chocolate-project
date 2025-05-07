@@ -11,6 +11,7 @@
   }
   &__box {
     @include flexbox();
+    flex-wrap: wrap;
   }
   &__span1 {
     color: $hover_text-color;
@@ -21,6 +22,12 @@
     @include title($normal: -0.56px);
     max-width: 300px;
     margin-right: auto;
+    font-size: 24px;
+    margin-bottom: 32px;
+    @media screen and (min-width:1200px){
+      font-size: 28px;
+      margin-bottom: 0px;
+    }
   }
   &__phrase {
     @include footer-text();
@@ -37,6 +44,7 @@
   }
   &__list {
     @include flexbox($space: 24px);
+    flex-direction: column;
   }
   &__list1 {
     @include flexbox($direction: column);

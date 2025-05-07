@@ -6,7 +6,13 @@
   background-position: center;
 }
 &__list {
-  @include flexbox($space: 88px)
+  @media screen and (min-width: 355px) {
+      flex-wrap: wrap;
+  }
+  @media screen and (min-width:1200px) {
+    flex-wrap: nowrap;
+  }
+  @include flexbox($space: 88px);
 }
 &__subtitle {
   color: $title-color;

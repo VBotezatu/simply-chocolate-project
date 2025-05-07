@@ -1,12 +1,7 @@
 .experience {
   background-image: url(../images/experience.webp);
   background-repeat: no-repeat;
-  @include section-padding(
-    $top: 72px,
-    $bottom: 72px,
-    $right: 367px,
-    $left: 366px
-  );
+  @include section-padding($top: 72px, $bottom: 72px);
   background-position: center;
   background-size: cover;
   &__title {
@@ -21,7 +16,10 @@
   &__text {
     @include footer-text();
     margin-bottom: 24px;
-    max-width: 467px;
+    max-width: 326px;
+    @media screen and (min-width: 1200px) {
+      max-width: 467px;
+    }
     margin-left: auto;
     margin-right: auto;
     text-align: center;
