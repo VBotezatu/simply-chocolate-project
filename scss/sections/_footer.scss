@@ -1,5 +1,5 @@
 .footer {
-  background-color: $logo-color;
+  background-color: rgba(30, 24, 35, 1);
   @include section-padding(
     $top: 50px,
     $bottom: 50px,
@@ -45,6 +45,9 @@
   &__list {
     @include flexbox($space: 24px);
     flex-direction: column;
+    @media screen and (min-width:1200px){
+      flex-direction: row;
+    }
   }
   &__list1 {
     @include flexbox($direction: column);

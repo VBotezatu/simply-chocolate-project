@@ -83,7 +83,7 @@
             </a>
           </li>
         </ul>
-        <button class="header__sidebar">
+        <button class="header__sidebar" data-menu-open>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -567,7 +567,9 @@
                 >
               </li>
               <li class="footer__item">
-                <a class="footer__link footer__link1" href="mailto:simplychoc@gmail.com"
+                <a
+                  class="footer__link footer__link1"
+                  href="mailto:simplychoc@gmail.com"
                   >simplychoc@gmail.com</a
                 >
               </li>
@@ -602,7 +604,7 @@
       </div>
     </footer>
     <!-- rewiew-model-window -->
-    <!-- <div data-modal class="backdrop is-hidden">
+    <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close type="button" class="modal__close">
           <svg class="modal__icon">
@@ -623,9 +625,9 @@
           <button class="modal__button" type="submit">Subscribe</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <!-- aaaaaa -->
-    <!-- <div data-rewiew class="backdrop is-hidden">
+    <div data-rewiew class="backdrop is-hidden">
       <div class="rewiew">
         <button data-rewiew-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -677,9 +679,9 @@
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
     <!-- buy -->
-    <!-- <div data-buy class="backdrop is-hidden">
+    <div data-buy class="backdrop is-hidden">
       <div class="buy">
         <button data-buy-close type="button" class="buy__close">
           <svg class="buy__icon">
@@ -752,16 +754,12 @@
               />
             </li>
             <li class="form__item2 form__item24">
-              <img
-                class="form__img21"
-                src="./images/mastercard.webp"
-                alt=""
-              />
+              <img class="form__img21" src="./images/mastercard.webp" alt="" />
               <label class="form__label2" for="card">Card number</label>
               <input
                 required
                 id="card"
-                class="form__input2"
+                class="form__input2 form__input11"
                 type="number"
                 placeholder="Enter card"
               />
@@ -782,8 +780,8 @@
           </button>
         </form>
       </div>
-    </div> -->
-    <!-- <div data-feedback class="backdrop is-hidden">
+    </div>
+    <div data-feedback class="backdrop is-hidden">
       <div class="feedback">
         <button data-feedback-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -795,8 +793,8 @@
         </h2>
         <p class="feedback__text">We are so happy to hear from you!</p>
       </div>
-    </div> -->
-    <!-- <div data-thanks class="backdrop is-hidden">
+    </div>
+    <div data-thanks class="backdrop is-hidden">
       <div class="feedback">
         <button data-thanks-close type="button" class="rewiew__button">
           <svg class="rewiew__icon">
@@ -808,11 +806,49 @@
         </h2>
         <p class="feedback__text">We are so happy to hear from you!</p>
       </div>
-    </div> -->
+    </div>
+    <div data-menu class="backdropik is-hidden">
+      <div class="menu">
+        <button type="button" class="menu__close">
+          <svg class="modal__icon">
+            <use
+              href="./images/symbol-defs.svg#icon-close"
+              data-menu-close
+            ></use>
+          </svg>
+        </button>
+        <nav class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item1">Home</li>
+            <li class="footer__item1">How it’s made?</li>
+            <li class="footer__item1">Our products</li>
+            <li class="footer__item1">Top sellers</li>
+            <li class="footer__item1">Chocolate is loved</li>
+          </ul>
+        </nav>
+        <ul class="header__socials">
+          <li class="header__social">
+            <a href="" class="header__instagram">
+              <svg class="header__insta">
+                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__social">
+            <a href="" class="header__twitt">
+              <svg class="header__twitter">
+                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js" type="module"></script>
     <script src="./js/modal-rewiew.js" type="module"></script>
     <script src="./js/modal-buy.js" type="module"></script>
     <script src="./js/modal-feedback.js" type="module"></script>
+    <script src="./js/modal-menu.js" type="module"></script>
     <script src="./js/modal-thanks.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

@@ -61,8 +61,12 @@
     align-items: flex-start;
     @include button($size: 14px);
     padding: 12px 28px;
+    width: 120px;
+    height: 41px;
     @media screen and (min-width: 768px) {
       @include button($size: 14px);
+      height: 45px;
+      width: 144px;
     }
     @media screen and (min-width: 1200px) {
       @include button($size: 14px);
@@ -76,12 +80,16 @@
     @include flexbox($space: 14px, $alignment: flex-start);
     // max-width: 159px;
     height: 41px;
-    padding: 12px 28px;
+    width: 159px;
+    padding-top: 12px;
+    padding-left: 28px;
     flex-shrink: 0;
     color: $title-color;
     @media screen and (min-width: 768px) {
+      width: 183px;
       height: 45px;
-      padding: 14px 40px;
+      padding-top: 14px;
+      padding-left: 40px;
       // max-width: 183px;
     }
     @include text-14();

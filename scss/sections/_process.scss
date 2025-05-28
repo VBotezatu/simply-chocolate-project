@@ -11,20 +11,32 @@
   &__mainbox {
     @include flexbox($space: 52px);
     flex-direction: column;
+    align-items: center;
     @media screen and (min-width: 1200px) {
       flex-direction: row;
     }
   }
   &__img {
     max-width: 335px;
+    @media screen and (min-width: 768px) {
+      max-width: 614px;
+      height: 400px;
+    }
     @media screen and (min-width: 1200px) {
       max-width: 600px;
       height: 400px;
     }
   }
   &__box {
-    width: 516px;
-    height: 400px;
+    @media screen and (min-width: 768px) {
+      width: 614px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 516px;
+      height: 400px;
+    }
+    width: 335px;
+    height: 463px;
     padding: 32px;
     flex-shrink: 0;
     border-radius: 15px;
@@ -52,7 +64,11 @@
   }
   &__text {
     @include footer-text();
+    text-align: initial;
     color: black;
+    @media screen and (min-width: 768px) {
+      min-width: 464px;
+    }
     &::before {
       content: "";
       width: 8px;

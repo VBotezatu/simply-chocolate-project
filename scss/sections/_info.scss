@@ -6,13 +6,17 @@
   background-position: center;
 }
 &__list {
-  @media screen and (min-width: 355px) {
+  @media screen and (min-width: 320px) {
       flex-wrap: wrap;
   }
   @media screen and (min-width:1200px) {
     flex-wrap: nowrap;
   }
   @include flexbox($space: 88px);
+  flex-wrap: wrap;
+}
+&__item {
+width: 308px;
 }
 &__subtitle {
   color: $title-color;
@@ -40,6 +44,7 @@
 
 &__text {
   @include footer-text();
+  text-align: initial;
 }
 }
 

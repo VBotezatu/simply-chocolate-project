@@ -1,6 +1,9 @@
 .buy {
   @include modal();
-  width: 609px;
+  max-width: 609px;
+  @media screen and (min-width: 768px) {
+    max-width: 605px;
+  }
   height: 100vh;
   background: #fafafa;
   padding: 48px;
@@ -11,7 +14,10 @@
     stroke: #111;
   }
   &__close {
-    @include absolute($top: 24px, $left: 550px);
+    @include absolute($top: 24px, $left: 300px);
+    @media screen and (min-width: 768px) {
+      @include absolute($top: 24px, $left: 550px);
+    }
     background-color: transparent;
   }
   &__title {
@@ -56,18 +62,46 @@
     margin-top: 32px;
     margin-bottom: 40px;
   }
+  &__item:nth-child(1){
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__item:nth-child(2) {
+    display: none;
+    @media screen and (min-width: 700px) {
+      display: block;
+      display: flex;
+    }
+  }
+  &__item:nth-child(3) {
+    display: none;
+    @media screen and (min-width: 700px) {
+      display: block;
+      display: flex;
+    }
+  }
 }
 .form {
   &__label {
-    @include footer-text();
     display: block;
     margin-bottom: 8px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.28px;
   }
   &__input {
     @include flexbox($space: 40px, $alignment: flex-start);
     padding: 22px 24px;
     align-self: stretch;
     border-radius: 13px;
+    width: 263px;
+    height: 45px;
+    @media screen and (min-width: 768px) {
+      width: 246px;
+      height: 66px;
+    }
     border: 1.5px solid rgba(17, 17, 17, 0.05);
     color: rgba(64, 64, 64, 0.3);
     @include text-18();
@@ -81,9 +115,16 @@
   &__list {
     @include flexbox($space: 21px);
     margin-bottom: 18px;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
   &__input1 {
-    margin-top: 26px;
+    margin-top: 14px;
+    @media screen and (min-width: 768px) {
+      margin-top: 26px;
+    }
   }
   &__label2 {
     display: block;
@@ -91,7 +132,10 @@
   }
   &__input2 {
     @include flexbox($space: 40px, $alignment: flex-start);
-    width: 513px;
+    width: 263px;
+    @media screen and (min-width: 768px) {
+      width: 513px;
+    }
     padding: 22px 24px;
     border-radius: 13px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
@@ -102,6 +146,9 @@
   &__input2:hover {
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
     outline: none;
+  }
+  &__input11 {
+    position: relative;
   }
   &__list2 {
     @include flexbox($space: 18px, $direction: column);
@@ -128,12 +175,20 @@
   &__img21 {
     width: 44px;
     height: 30px;
-    @include absolute($top: 45px, $left: 450px);
+    @include absolute($top: 45px, $left: 200px);
+    z-index: 1;
+    @media screen and (min-width: 768px) {
+      @include absolute($top: 45px, $left: 445px);
+    }
   }
   &__input18 {
-    height: 137px;
     @include flexbox($space: 40px, $alignment: flex-start);
-    width: 513px;
+    width: 263px;
+    height: 91px;
+    @media screen and (min-width: 768px) {
+      width: 513px;
+      height: 137px;
+    }
     padding: 22px 24px 93px 24px;
   }
   &__button {

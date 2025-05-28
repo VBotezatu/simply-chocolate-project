@@ -1,7 +1,12 @@
 .rewiew {
+  position: relative;
   @include modal();
-  width: 517px;
-  height: 631px;
+  max-width: 600px;
+  max-height: 95vh;
+  @media screen and (min-width: 768px) {
+    width: 517px;
+    min-height: 631px;
+  }
   background: #fafafa;
   padding: 40px;
   &__icon {
@@ -10,13 +15,21 @@
     stroke: black;
   }
   &__button {
-    @include absolute($top: 24px, $left: 450px);
+    @include absolute($top: 14px, $left: 285px);
+    padding-bottom: 32px;
+    @media screen and (min-width: 768px) {
+      @include absolute($top: 24px, $left: 450px);
+    }
     background-color: transparent;
   }
   &__title {
     @include section-title();
     font-style: normal;
-    max-width: 298px;
+    max-width: 255px;
+    @media screen and (min-width: 768px) {
+      max-width: 298px;
+    }
+
     margin-bottom: 40px;
   }
   &__span {
@@ -29,7 +42,10 @@
     border-radius: 13px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
-    width: 437px;
+    width: 263px;
+    @media screen and (min-width: 768px) {
+      width: 437px;
+    }
     color: rgba(64, 64, 64, 0.3);
     @include text-18();
   }
@@ -61,9 +77,15 @@
     position: relative;
   }
   &__entertext {
-    height: 137px;
+    height: 91px;
+    @media screen and (min-width: 768px) {
+      height: 137px;
+    }
     @include flexbox($space: 40px, $alignment: flex-start);
-    width: 437px;
+    width: 263px;
+    @media screen and (min-width: 768px) {
+      width: 437px;
+    }
     padding: 22px 24px 93px 24px;
   }
   &__send {
