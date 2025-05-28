@@ -21,6 +21,10 @@ button {
   border: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .header__page, .footer__item1 {
   font-weight: 500;
   line-height: 16px;
@@ -480,13 +484,13 @@ body {
 .hero__container {
   background-color: black;
   background-image: url(../images/hero-background.webp);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 395px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  background-size: 1168px auto;
   border-radius: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -1047,12 +1051,6 @@ body {
   letter-spacing: -0.28px;
   text-align: initial;
   color: black;
-  max-width: 291px;
-}
-@media screen and (min-width: 768px) {
-  .process__text {
-    min-width: 464px;
-  }
 }
 .process__text::before {
   content: "";
@@ -1062,11 +1060,6 @@ body {
   position: absolute;
   top: 5px;
   left: -20px;
-}
-@media screen and (min-width: 1200px) {
-  .process__text {
-    max-width: 409px;
-  }
 }
 
 .products {
@@ -1349,7 +1342,7 @@ body {
   color: black;
 }
 .users__box {
-  width: 335px;
+  max-width: 335px;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   background: #fff;
@@ -1369,7 +1362,7 @@ body {
 .users__img {
   position: absolute;
   bottom: 160px;
-  right: 140px;
+  right: 110px;
   width: 80px;
   height: 80px;
 }

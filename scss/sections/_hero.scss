@@ -13,6 +13,7 @@
   &__container {
     background-color: black;
     background-image: url(../images/hero-background.webp);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     @include section-padding(
@@ -37,7 +38,6 @@
         $top: 380px
       );
     }
-    background-size: 1168px auto;
     border-radius: 30px;
   }
   &__title {

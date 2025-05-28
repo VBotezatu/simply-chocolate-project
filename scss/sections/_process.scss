@@ -66,19 +66,12 @@
     @include footer-text();
     text-align: initial;
     color: black;
-    @media screen and (min-width: 768px) {
-      min-width: 464px;
-    }
     &::before {
       content: "";
       width: 8px;
       height: 8px;
       background-image: url(../images/made-elips.webp);
       @include absolute($top: 5px, $left: -20px);
-    }
-    max-width: 291px;
-    @media screen and (min-width: 1200px) {
-      max-width: 409px;
     }
   }
 }
