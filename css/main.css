@@ -25,6 +25,13 @@ button {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .header__page, .footer__item1 {
   font-weight: 500;
   line-height: 16px;
@@ -982,19 +989,22 @@ body {
     flex-direction: row;
   }
 }
+.process__picture {
+  border-radius: 15px;
+  overflow: hidden;
+}
 .process__img {
   max-width: 335px;
 }
 @media screen and (min-width: 768px) {
   .process__img {
     max-width: 614px;
-    height: 400px;
+    height: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .process__img {
     max-width: 600px;
-    height: 400px;
   }
 }
 .process__box {
@@ -1186,6 +1196,7 @@ body {
 }
 .sellers__img {
   max-width: 300px;
+  border-radius: 15px;
 }
 @media screen and (min-width: 768px) {
   .sellers__img {
@@ -1196,6 +1207,10 @@ body {
   .sellers__img {
     max-width: 368px;
   }
+}
+.sellers__picture {
+  border-radius: 15px;
+  overflow: hidden;
 }
 .sellers__list {
   align-items: flex-start;

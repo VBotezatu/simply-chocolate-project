@@ -15,12 +15,17 @@
   }
   &__img {
     max-width: 300px;
+    border-radius: 15px;
     @media screen and (min-width: 768px) {
       max-width: 344px;
     }
     @media screen and (min-width: 1200px) {
       max-width: 368px;
     }
+  }
+  &__picture {
+    border-radius: 15px;
+    overflow: hidden;
   }
   &__list {
     @include flexbox($space: 16px);

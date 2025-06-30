@@ -16,15 +16,18 @@
       flex-direction: row;
     }
   }
+  &__picture {
+    border-radius: 15px;
+    overflow: hidden;
+  }
   &__img {
     max-width: 335px;
     @media screen and (min-width: 768px) {
       max-width: 614px;
-      height: 400px;
+      height: auto;
     }
     @media screen and (min-width: 1200px) {
       max-width: 600px;
-      height: 400px;
     }
   }
   &__box {
