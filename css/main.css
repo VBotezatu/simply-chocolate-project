@@ -512,17 +512,17 @@ body {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero__container {
-    background-image: url(../../images/tablet/hero@mobile-2x.webp);
+    background-image: url(../../images/tablet/hero@tablet-2x.webp);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__container {
-    background-image: url(../../images/desktop/hero@mobile-1x.webp);
+    background-image: url(../../images/desktop/hero@desktop-1x.webp);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__container {
-    background-image: url(../../images/desktop/hero@mobile-2x.webp);
+    background-image: url(../../images/desktop/hero@desktop-2x.webp);
   }
 }
 @media screen and (min-width: 768px) {

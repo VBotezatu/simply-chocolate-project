@@ -23,15 +23,15 @@
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../../images/tablet/hero@mobile-2x.webp);
+        background-image: url(../../images/tablet/hero@tablet-2x.webp);
       }
     }
        @media screen and (min-width: 1200px) {
-      background-image: url(../../images/desktop/hero@mobile-1x.webp);
+      background-image: url(../../images/desktop/hero@desktop-1x.webp);
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../../images/desktop/hero@mobile-2x.webp);
+        background-image: url(../../images/desktop/hero@desktop-2x.webp);
       }
     }
     background-size: cover;
