@@ -12,7 +12,28 @@
   }
   &__container {
     background-color: black;
-    background-image: url(../images/hero-background.webp);
+    background-image: url(../../images/mobile/hero@mobile-1x.webp);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../images/mobile/hero@mobile-2x.webp);
+    }
+    @media screen and (min-width: 768px) {
+      background-image: url(../../images/tablet/hero@tablet-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../images/tablet/hero@mobile-2x.webp);
+      }
+    }
+       @media screen and (min-width: 1200px) {
+      background-image: url(../../images/desktop/hero@mobile-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../images/desktop/hero@mobile-2x.webp);
+      }
+    }
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
