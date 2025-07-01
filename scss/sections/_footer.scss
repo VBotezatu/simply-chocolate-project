@@ -69,6 +69,9 @@
     border-top: solid rgba(255, 255, 255, 0.1);
     margin-top: 58px;
     padding-top: 24px;
+    & a {
+  color: aliceblue;
+}
   }
   &__icon {
     @extend %icons;
