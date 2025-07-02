@@ -73,6 +73,9 @@
   color: aliceblue;
 }
   }
+  &__page {
+    color: azure
+  }
   &__icon {
     @extend %icons;
     fill: $logo-color;

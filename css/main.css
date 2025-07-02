@@ -278,6 +278,12 @@ body {
   margin-top: 58px;
   padding-top: 24px;
 }
+.footer__navigation a {
+  color: aliceblue;
+}
+.footer__page {
+  color: azure;
+}
 .footer__icon {
   fill: #111;
   stroke: #fff;
